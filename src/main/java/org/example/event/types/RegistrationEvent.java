@@ -12,5 +12,5 @@ import javax.inject.Qualifier;
 @Retention(value = RUNTIME)
 @Target({ TYPE, METHOD, PARAMETER, FIELD })
 public @interface RegistrationEvent {
-
+    // intentionally left empty - used to group registration events
 }

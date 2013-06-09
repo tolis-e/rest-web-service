@@ -15,7 +15,7 @@ public class CarEventHandler {
     private Logger log;
 
     public void onRegistration(@Observes @RegistrationEvent Car car) {
-        log.info(StringUtilities.concatStrings("Registration Event received for car: ", car.toString()));
+        log.info(StringUtilities.concatStrings("Registration Event received for car: '", car.toString(), "'"));
     }
 
 }
