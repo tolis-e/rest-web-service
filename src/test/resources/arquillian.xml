@@ -7,7 +7,7 @@
 
     <container qualifier="jboss-managed" default="true">
         <configuration>
-            <property name="jbossHome">${basedir}/target/jboss-as-7.1.1.Final</property>
+            <property name="jbossHome">${env.JBOSS_HOME:target/jboss-as-7.1.1.Final}</property>
         </configuration>
     </container>
 

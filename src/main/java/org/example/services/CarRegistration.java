@@ -1,7 +1,5 @@
 package org.example.services;
 
-import java.util.logging.Logger;
-
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
@@ -12,9 +10,6 @@ import org.example.model.Car;
 
 @Stateless
 public class CarRegistration {
-
-    @Inject
-    private Logger log;
 
     @Inject
     private EntityManager em;

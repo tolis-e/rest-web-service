@@ -7,15 +7,14 @@ import javax.inject.Inject;
 
 import org.example.event.types.RegistrationEvent;
 import org.example.model.Car;
-import org.example.utils.StringUtilities;
 
 public class CarEventHandler {
 
     @Inject
-    private Logger log;
+    private Logger logger;
 
     public void onRegistration(@Observes @RegistrationEvent Car car) {
-        log.info(StringUtilities.concatStrings("Registration Event received for car: '", car.toString(), "'"));
+        logger.finest(String.format("Registration Event received for car: %s", car.toString()));
     }
 
 }

@@ -10,7 +10,6 @@ import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import org.example.utils.StringUtilities;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
@@ -79,7 +78,7 @@ public class Car implements Serializable {
 
     @Override
     public String toString() {
-        return StringUtilities.concatStrings(super.toString(), " [ id=", id, " model=", model, " color=", color,
-                " numberFrame=", numberFrame, " ]");
+        return new StringBuilder().append(super.toString()).append(" [ id=").append(id).append(" model=").append(model)
+                .append(" color=").append(color).append(" numberFrame=").append(numberFrame).append(" ]").toString();
     }
 }
